@@ -121,7 +121,7 @@ returns when the passkey is created, following WebAuthn Level 2 section 7.1:
 the client data (`webauthn.create`, your challenge, your origin), the RP ID
 hash, the user presence and verification flags, and the attestation statement.
 
-```go
+```text
 res, err := soroauth.VerifyAttestation(soroauth.AttestationRequest{
     AttestationObject: attestationObject,
     ClientDataJSON:    clientDataJSON,
