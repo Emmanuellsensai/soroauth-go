@@ -69,6 +69,7 @@ type Violation struct {
 	Detail string
 }
 
+// String renders the violation as "check: detail".
 func (v Violation) String() string { return v.Check + ": " + v.Detail }
 
 // Run runs every check as a subtest of t and fails the ones that are

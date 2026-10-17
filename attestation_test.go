@@ -83,9 +83,10 @@ func TestVerifyAttestationRealAuthenticators(t *testing.T) {
 		wantRealAAG bool // AAGUID is non-zero
 	}{
 		{vector: "feitian_biopass_packed_x5c", want: AttestationTrustUnrooted, wantRealAAG: true},
-		{vector: "solokeys_solo2_packed_x5c", want: AttestationTrustUnrooted, wantRealAAG: true},
+		// Solo 2 registers an Ed25519 credential key, which a Soroban host cannot verify.
+		{vector: "solokeys_solo2_packed_x5c", wantErr: ErrAttestationUnsupportedFormat},
 		{vector: "virtual_authenticator_packed_x5c", want: AttestationTrustUnrooted, wantRealAAG: true},
-		{vector: "macos_platform_packed_self", want: AttestationTrustSelf},
+		{vector: "macos_platform_packed_self", want: AttestationTrustSelf, wantRealAAG: true},
 		{vector: "google_titan_none", want: AttestationTrustNone},
 		{vector: "google_titan_fido_u2f", wantErr: ErrAttestationUnsupportedFormat},
 		{vector: "packed_es512_self", wantErr: ErrAttestationUnsupportedFormat},

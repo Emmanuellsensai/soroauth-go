@@ -14,7 +14,7 @@ read back out of the client data.
 | Name                               | Authenticator                                 | Format                  |
 | ---------------------------------- | --------------------------------------------- | ----------------------- |
 | `feitian_biopass_packed_x5c`       | FEITIAN BioPass FIDO2 USB security key        | packed, x5c (3 certs)   |
-| `solokeys_solo2_packed_x5c`        | SoloKeys Solo 2                               | packed, x5c             |
+| `solokeys_solo2_packed_x5c`        | SoloKeys Solo 2 (Ed25519 key, unsupported)    | packed, x5c             |
 | `virtual_authenticator_packed_x5c` | GramThanos virtual FIDO2 authenticator (soft) | packed, x5c             |
 | `macos_platform_packed_self`       | macOS platform authenticator                  | packed, self            |
 | `google_titan_none`                | Google Titan security key                     | none                    |
