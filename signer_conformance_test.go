@@ -1,7 +1,6 @@
 package soroauth_test
 
 import (
-	"context"
 	"crypto/ed25519"
 	"crypto/sha256"
 	"fmt"
