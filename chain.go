@@ -94,6 +94,7 @@ type ChainError struct {
 
 // Error returns the cause's message.
 func (e *ChainError) Error() string { return e.cause.Error() }
+
 // Unwrap returns the cause, so errors.Is sees the sentinel.
 func (e *ChainError) Unwrap() error { return e.cause }
 
