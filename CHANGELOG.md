@@ -18,8 +18,8 @@ this project adheres to
   `soroauth doctor` runs it for the seed named by `--secret-env` (with
   `--address` to name the account it should sign for). `NewFallbackSigner` and
   `NewQuorumSigner` combine signers for one address: only errors marked with
-  `MarkTransient` fall through, a policy refusal or any unclassified error
-  stops the chain, disagreeing quorum signatures are refused, and every attempt
+  `MarkTransient` fall through, a policy refusal or any unclassified error stops
+  the chain, disagreeing quorum signatures are refused, and every attempt
   reaches an audit sink. `VerifyAttestation` verifies a passkey registration
   (`none` and `packed`, other formats refused) and separates what was proven
   from what was asserted.

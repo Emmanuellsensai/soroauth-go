@@ -117,9 +117,9 @@ core is for; see [Step 0](#step-0-the-browser-derives-the-payload).
 
 Signing starts from a key the wallet already trusts; enrolment is where it
 decides to trust one. `VerifyAttestation` checks the registration the browser
-returns when the passkey is created, following WebAuthn Level 2 section 7.1:
-the client data (`webauthn.create`, your challenge, your origin), the RP ID
-hash, the user presence and verification flags, and the attestation statement.
+returns when the passkey is created, following WebAuthn Level 2 section 7.1: the
+client data (`webauthn.create`, your challenge, your origin), the RP ID hash,
+the user presence and verification flags, and the attestation statement.
 
 ```text
 res, err := soroauth.VerifyAttestation(soroauth.AttestationRequest{
